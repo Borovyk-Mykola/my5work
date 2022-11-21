@@ -8,7 +8,6 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/modern-normalize/1.1.0/modern-normalize.min.css">
     <link rel="stylesheet" href="./css/styles.css">
     <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Raleway:wght@700&family=Roboto:wght@400;500;700;900&display=swap">
-    <link rel="stylesheet" href="./modal.js">
 </head>
 <body>
     <header class="border">
@@ -45,7 +44,7 @@
         <section class="main-section">
             <div class="container">
                 <h1 class="main-title">Ефективні рішення<br>для вашого бізнесу</h1>
-                <button type="button" class="main-button">Замовити послугу</button>
+                <button type="button" class="main-button" data-modal-open>Замовити послугу</button>
             </div>
         </section>
         <section class="section section-tools">
@@ -311,17 +310,15 @@
             </div>
         </div>
     </footer>
-    <div class="backdrop is-hidden">
+    <div class="backdrop is-hidden" data-modal>
         <div class="modal">
-            <button class="close">
+            <button class="close" data-modal-close>
                 <svg class="close-svg" height="18" width="18">
                     <use href="./images/icon.svg#close-black"></use>
                 </svg>
             </button>
         </div>
     </div>
-    <script>
-        
-    </script>
+    <script src="./js/modal.js"></script>
 </body>
 </html>
