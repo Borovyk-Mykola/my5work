@@ -318,30 +318,46 @@
                     <use href="./images/icon.svg#close-black"></use>
                 </svg>
             </button>
-            <div class="input">
-                <label for="">
-                    <svg class="" height="18" width="18">
+            <Ul class="inputs">
+            <li>
+                <label>
+                    <p>Ім'я</p>
+                    <svg class="input-svg" height="18" width="18">
                         <use href="./images/icon.svg#person-black"></use>
                     </svg>
-                    <input type="text">
+                    <input class="input" type="text">
                 </label>
-            </div>
-            <div class="input">
-                <label for="">
-                    <svg class="" height="18" width="18">
+            </li>
+            <li>
+                <label>
+                    <p>Телефон</p>
+                    <svg class="input-svg" height="18" width="18">
                         <use href="./images/icon.svg#phone-black"></use>
                     </svg>
-                    <input type="tel">
+                    <input class="input" type="tel">
                 </label>
-            </div>
-            <div class="input">
-                <label for="">
-                    <svg class="" height="18" width="18">
-                        <use href="./images/icon.svg#mail-black"></use>
+            </li>
+            <li>
+                <label>
+                    <p>Пошта</p>
+                    <svg class="input-svg" height="18" width="18">
+                        <use href="./images/icon.svg#email-black"></use>
                     </svg>
-                    <input type="email">
+                    <input class="input" type="email">
                 </label>
-            </div>
+            </li>
+            <li>
+                <label>
+                    <p>Коментар</p>
+                    <textarea class="input comment" name="comment" placeholder="Введіть текст"></textarea>
+                </label>
+            </li>
+            </Ul>
+            <input class="policy" type="checkbox" id="policy">
+            <label for="policy">Погоджуюся з розсилкою та приймаю
+                <a href="">Умови договору</a>
+            </label>
+            <button type="button" class="go" >Відправити</button>
         </div>
     </div>
     <script src="./js/modal.js"></script>
