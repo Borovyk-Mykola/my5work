@@ -62,7 +62,7 @@ img {
     color: var(--accent-color);
 }
     /*Посилання*/
-.nav-link:hover, .link:hover, .nav-link:focus, .link:focus, .footer-address a:focus, .footer-address a:hover {
+.nav-link:hover, .nav-link:focus, .footer-address a:focus, .footer-address a:hover {
     color: var(--accent-color);
 }
 
@@ -148,17 +148,16 @@ header .container{
 
 .border {
     border-bottom: 1px solid #ECECEC
-}
-
-.header li:hover .envelope, .header li:focus .envelope,
-.header li:hover .smartphone, .header li:focus .smartphone {
-    fill: var(--accent-color);
-    cursor: pointer;
-}
+}   
 
 .header li:hover .link,
-.header li:focus .link {
+.header li:focus .link, 
+.header li:hover .envelope,
+.header li:focus .envelope,
+.header li:focus .smartphone,
+.header li:hover .smartphone {
     color: var(--accent-color);
+    fill: var(--accent-color);
     cursor: pointer;
 }
 
@@ -454,6 +453,45 @@ header .container{
     background-color: var(--accent-color);
 }
 
+.footer-label {
+    display: flex;
+    align-items: center;
+}
+
+.footer-input {
+    background: scroll;
+    height: 50px;
+    width: 358px;
+    padding-left: 16px;
+    border: 1px solid rgba(255, 255, 255, 0.3);
+    filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.15));
+    border-radius: 4px;
+}
+
+.footer-button {
+    height: 50px;
+    width: 200px;
+    margin-left: 12px;
+    background-color: var(--accent-color);
+    border-color: var(--accent-color);
+    color: var(--primery-color);
+    border-radius: 4px;
+    display: flex;
+    align-items: center;
+    padding-left: 28px;
+
+    font-family: roboto, sans-serif;
+    font-style: normal;
+    font-weight: 700;
+    font-size: 16px;
+    line-height: 1.88;
+    letter-spacing: 0.06em;
+}
+
+.footer-button svg {
+    margin-left: 10px;
+}
+
     /* Фільтр портфоліо*/
 .button {
     cursor: pointer;
@@ -543,21 +581,20 @@ header .container{
     text-decoration: none;
 }
 
-.portfolio li a {
+.back {
     position: relative;
+    overflow-y: hidden;
 }
 
-.back {
+.back-text {
+    content: "";
     position: absolute;
     top: 100%;
     height: 100%;
     opacity: 0;
     pointer-events: none;
-
+    
     transition: top 250ms cubic-bezier(0.4, 0, 0.2, 1);
-}
-
-.back-text {
     font-weight: 400;
     font-size: 18px;
     line-height: 1.56;
@@ -567,12 +604,13 @@ header .container{
     padding-top: 63px;
     padding-left: 24px;
     padding-right: 24px;
+    padding-bottom: 63px;
 
     background-color: var(--accent-color);
     color: var(--primery-color);
 }
 
-.portfolio a:hover .back {
+.back:hover .back-text {
     top: 0;
     opacity: 0.9;
 }
@@ -608,7 +646,9 @@ header .container{
     top: 50%;
     left: 50%;
 
-    transform: translate(-50%, -50%) scale(1);
+    transform: translate(-50%, -50%);
+    scale: 1;
+    visibility: visible;
     justify-content:right;
     transition: transform 250ms cubic-bezier(0.4, 0, 0.2, 1);
 
@@ -630,6 +670,7 @@ header .container{
     border-radius: 50%;
     border: 1px solid rgba(0, 0, 0, 0.1);
     background-color: var(--primery-color);
+    transition: fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .close:hover {
@@ -665,6 +706,7 @@ header .container{
     border: 1px solid rgba(33, 33, 33, 0.2);
     border-radius: 4px;
     padding-left: 42px;
+    transition: border-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .input-svg {
@@ -672,6 +714,7 @@ header .container{
     margin-top: 11px;
     margin-bottom: 11px;
     margin-left: 12px;
+    transition: fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 label>p {
@@ -707,16 +750,52 @@ label>p {
     align-items: center;
     margin-left: auto;
     margin-right: auto;
+    margin-bottom: 40px;
     filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25));
 }
 
 .policy {
+    appearance: none;
+    position: absolute;
+}
+
+.modal a {
+    color: var(--accent-color);
+}
+
+label:focus-within .input-svg, label:hover { 
+    fill: var(--accent-color);
+    cursor: pointer;
+}
+
+.input:focus, .input:hover {
+    outline: none;
+    border-color: var(--accent-color);
+    cursor: pointer;
+}
+
+.check-label {
+    display: flex;
+    align-items: center;
     margin-top: 20px;
     margin-bottom: 30px;
     margin-left: 52px;
     text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
 }
 
-.modal a {
-    color: var(--accent-color);
+.vector {
+    display: inline-block;
+    height: 15px;
+    width: 16px;
+    margin-right: 7px;
+    border: 1px solid #000;
+    border-radius: 2px;
+}
+
+.policy:checked + .vector {
+    border-color: var(--accent-color);
+    background-color: var(--accent-color);
+    background-image: url(../images/Vector.svg);
+    background-size: contain;
+    background-origin: border-box;
 }

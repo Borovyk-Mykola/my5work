@@ -28,17 +28,21 @@
             </nav>
             <ul class="ul header">
                 <Li>
-                    <svg class="envelope" height="12" width="16" tabindex="0">
-                        <use href="./images/icon.svg#envelope"></use>
-                    </svg>
-                    <a href="mailto:info@devstudio.com" class="link">info@devstudio.com</a></Li>
+                    <a href="mailto:info@devstudio.com" class="link">
+                        <svg class="envelope" height="12" width="16">
+                            <use href="./images/icon.svg#envelope"></use>
+                        </svg>info@devstudio.com
+                    </a>
+                </Li>
                 <Li>
-                    <svg class="smartphone" height="16" width="10" tabindex="0">
-                        <use href="./images/icon.svg#smartphone"></use>
-                    </svg>
-                    <a href="tel:+380961111111" class="link">+38 096 111 11 11</a></Li>
+                    <a href="tel:+380961111111" class="link">
+                        <svg class="smartphone" height="16" width="10">
+                            <use href="./images/icon.svg#smartphone"></use>
+                        </svg>+38 096 111 11 11
+                    </a>
+                </Li>
             </ul>
-        </div>
+        </div>  
     </header>
     <main>
         <section class="main-section">
@@ -308,7 +312,17 @@
                     </li>
                 </ul>
             </div>
-        </div>
+            <div class="footer-social">
+                <h3 class="social-title">Підпишіться на розсилку</h3>
+                <label class="footer-label">
+                    <input class="footer-input" type="email" placeholder="E-mail">
+                    <button type="submit" class="footer-button">Підписатися
+                        <svg class="" height="24" width="24">
+                            <use href="./images/icon.svg#icon-send"></use>
+                        </svg>
+                    </button>
+                </label>
+            </div>
     </footer>
     <div class="backdrop is-hidden" data-modal>
         <div class="modal">
@@ -318,6 +332,7 @@
                     <use href="./images/icon.svg#close-black"></use>
                 </svg>
             </button>
+            <form>
             <Ul class="inputs">
             <li>
                 <label>
@@ -353,11 +368,14 @@
                 </label>
             </li>
             </Ul>
-            <input class="policy" type="checkbox" id="policy">
-            <label for="policy">Погоджуюся з розсилкою та приймаю
+            <label class="check-label" for="policy">
+                <input class="policy" type="checkbox" id="policy">
+                <span class="vector"></span>
+                Погоджуюся з розсилкою та приймаю
                 <a href="">Умови договору</a>
             </label>
-            <button type="button" class="go" >Відправити</button>
+            <button type="submit" class="go">Відправити</button>
+            </form>
         </div>
     </div>
     <script src="./js/modal.js"></script>
